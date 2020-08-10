@@ -15,6 +15,12 @@ First, install `gulp-modernizr` as a development dependency:
 npm install --save-dev gulp-modernizr
 ```
 
+or with yarn:
+
+```shell
+yarn add --dev gulp-modernizr
+```
+
 Then, add it to your `gulpfile.js`:
 
 ```javascript
@@ -77,15 +83,15 @@ The 'settings' object can also be required from a JSON file:
 modernizr-config.json:
 ```javascript
 {
-  'options': ['setClasses'],
-  'tests': [
-      'webworkers',
+  "options": ["setClasses"],
+  "tests": [
+      "webworkers",
       [
-          'cssgrid',
-          'cssgridlegacy'
+          "cssgrid",
+          "cssgridlegacy"
       ]
   ],
-  excludeTests: ['csstransforms3d']
+  "excludeTests": ["csstransforms3d"]
 }
 ```
 
@@ -101,7 +107,7 @@ gulp.src('./js/*.js')
 
 #### `settings.crawl`
 
-By default, `glup-modernizr` will not output any `Modernizr.js` if your `gulp.src` does not contain any file, 
+By default, `gulp-modernizr` will not output any `Modernizr.js` if your `gulp.src` does not contain any file, 
 regardless of the `tests` you may have set.
 
 If you only want to output a `Modernizr.js` file with some `tests` you set, just pass a fake path to `gulp.src`:
